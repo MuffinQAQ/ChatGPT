@@ -42,6 +42,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent1);outline-of
     radial-gradient(700px 600px at 50% 110%, rgba(236,72,153,.07), transparent 60%);
 }
 
+/* 页面内容容器；注意：与 .wrap 同用的 .hero/.section/.foot-inner 只能写 padding-top/bottom，
+   若写 padding 简写（如 padding:54px 0 10px）会把这里的左右 24px 覆盖成 0，导致手机端顶到屏幕边 */
 .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
 
 /* ---------- 各模型品牌色（卡片图标渐变用） ---------- */
@@ -64,7 +66,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent1);outline-of
 .logo svg{width:26px;height:26px;flex:none}
 
 /* ---------- 首屏 Hero ---------- */
-.hero{display:flex;align-items:center;gap:56px;padding:72px 0 60px;flex-wrap:wrap}
+.hero{display:flex;align-items:center;gap:56px;padding-top:72px;padding-bottom:60px;flex-wrap:wrap}
 .hero-text{flex:1 1 420px;min-width:300px}
 .badge{
   display:inline-flex;align-items:center;gap:8px;
@@ -101,7 +103,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent1);outline-of
 }
 
 /* ---------- 区块标题 ---------- */
-.section{padding:54px 0 10px}
+.section{padding-top:54px;padding-bottom:10px}
 .section-head{display:flex;align-items:baseline;gap:16px;margin-bottom:30px;flex-wrap:wrap}
 .section-head h2{font-size:27px;font-weight:800;letter-spacing:.5px}
 .section-head h2::before{content:"▍";color:var(--accent2);margin-right:4px}
@@ -184,7 +186,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent1);outline-of
 
 /* ---------- 页脚 ---------- */
 footer{margin-top:70px;background:#fff;border-top:1px solid var(--border)}
-.foot-inner{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;padding:30px 0 38px}
+.foot-inner{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;padding-top:30px;padding-bottom:38px}
 footer p{font-size:13px;color:var(--text-dim)}
 footer p b{color:#6d28d9;font-weight:600}
 
@@ -197,7 +199,7 @@ html.js .reveal.visible{opacity:1;transform:none}
 
 /* ---------- 响应式 ---------- */
 @media (max-width:640px){
-  .hero{padding:48px 0 40px;gap:36px}
+  .hero{padding-top:48px;padding-bottom:40px;gap:36px}
   .hero-img::before{inset:0}              /* 收敛装饰光斑，避免窄屏横向溢出 */
   .grid-cards{grid-template-columns:1fr}
   .f-card{padding:24px 22px 22px}
