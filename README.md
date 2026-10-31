@@ -1,7 +1,7 @@
 <!-- ==================== 顶部：Logo + 标题 + 一句话简介 ==================== -->
 
 <p align="center">
-  <img src="https://muffinqaq.github.io/ChatGPT/img/model.jpg" alt="AI 大模型导航" width="100%">
+  <img src="img/model.jpg" alt="AI 大模型导航" width="100%">
 </p>
 
 
